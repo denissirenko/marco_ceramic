@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MarCo ceramic</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/slicknav.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"/>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="container">
+                <div class="menu">
+                    <div class="menu__navigation">
+                        <div class="icon_menu">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div class="menu__navigation_card">
+                            <a href="#" data-scroll=".footer" class="navigation_card_item">Главная</a>
+                            <a href="#" data-scroll=".stock-product" class="navigation_card_item">Каталог</a>
+                            <a href="#" data-scroll=".about-us" class="navigation_card_item">О нас</a>
+                            <a href="#" data-scroll=".footer" class="navigation_card_item">Контакты</a>
+                        </div>
+                        <div class="menu_search">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <div class="menu_search_card">
+                            <input type="search" name="search" id="search" placeholder="search...">
+                        </div>
+                    </div>    
+                    <h1 class="menu__logo"><a href="#">MarCo ceramic</a></h1>
+                    <div class="menu__icons">
+                        <div class="icon_phone">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="phone_contact_card">
+                            <a href="tel:+1234567890" class="phone_contact_link"><i class="fas fa-phone"></i>+1(234)-567-890</a>
+                            <a href="tel:+1234567890" class="phone_contact_link"><i class="fas fa-phone"></i>+1(234)-567-890</a>
+                            <a href="tel:+1234567890" class="phone_contact_link"><i class="fas fa-phone"></i>+1(234)-567-890</a>
+                        </div>
+                        <div class="icon_user">
+                            <i class="fas fa-user"></i>
+                            <div class="login_card">
+                                <input type="email" name="email" id="login_email" placeholder="Email">
+                                <input type="password" name="password" id="login_password" placeholder="Пароль">
+                                <div class="log_in">
+                                    <button class="btn">Войти</button>
+                                    <a href="#">Забыли пароль?</a>
+                                </div>
+                                <div class="reg">
+                                    <span>Нет учетной записи?</span>
+                                    <a class="reg_btn" href="#">Зарегистрироваться</a>
+                                </div>
+                            </div>
+                            <div class="registration_card">
+                                <div class="registration_block">
+                                    <input type="text" name="user_name" id="user_name" placeholder="Имя">
+                                    <input type="tel" name="tel" id="tel" placeholder="Телефон">
+                                </div>
+                                <div class="registration_block">
+                                    <input type="text" name="organization_name" id="organization_name" placeholder="Организяция">
+                                    <input type="email" name="email" id="registration_email" placeholder="Email">
+                                </div>
+                                <div class="registration_block">
+                                    <input type="password" name="password" id="registration_password" placeholder="Пароль">
+                                    <button class="btn">Отправить</button>
+                                </div>
+                                <div class="registration_login">
+                                    <span>Уже есть аккаунт?</span>
+                                    <a class="login_btn" href="#">Войти</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="icon_shop">
+                            <i class="fas fa-shopping-cart"></i>
+                            <div class="count_product">
+                                <span>1</span>
+                            </div>
+                        </div>
+                        <div class="shopping-card">
+                            <div class="shopping-block">
+                                <img src="img/shopping-img.jpg" alt="" class="shopping-img">
+                                <div class="shopping-name-group">
+                                    <span class="product-name">Ваза "Клариса"</span>
+                                    <span class="product-article">2439725</span>
+                                </div>
+                                <div class="shopping-price">27 Грн</div>
+                                <i class="fas fa-times"></i>
+                            </div>
+                            <div class="shopping-total-price">
+                                <span class="price-name">Итого:</span>
+                                <span class="price-count">277</span>
+                                <span class="price-currency">Грн</span>
+                            </div>
+                            <button class="btn-new-order">Оформить заказ</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="visual">
+            <ul class="tabs">
+                <li class="tabs_item"><a href="#tab1"><img src="img/img-tab1.png" alt=""><span class="tabs_item_name">Декор</span></a></li>
+                <li class="tabs_item"><a href="#tab2"><img src="img/img-tab4.png" alt=""><span class="tabs_item_name">Винные наборы</span></a></li>
+                <li class="tabs_item"><a href="#tab3"><img src="img/img-tab3.png" alt=""><span class="tabs_item_name">Лепка ручной работы</span></a></li>
+                <li class="tabs_item"><a href="#tab4"><img src="img/img-tab2.png" alt=""><span class="tabs_item_name">Акции и спецпредложения</span></a></li>
+            </ul>
+            <div class="tab_container">
+                <div id="tab1" class="tab_content">
+                    <h2 class="title">Керамика</h2>
+                    <span class="subtitle">декор</span>
+                    <button class="btn-details border-green">ОЗНАКОМИТЬСЯ</button>
+                </div>
+                <div id="tab2" class="tab_content">
+                    <h2 class="title">Керамика</h2>
+                    <span class="subtitle">винные наборы</span>
+                    <button class="btn-details border-green">ОЗНАКОМИТЬСЯ</button>
+                </div>
+                <div id="tab3" class="tab_content">
+                    <h2 class="title">Керамика</h2>
+                    <span class="subtitle">лепка ручной работы</span>
+                    <button class="btn-details border-green">ОЗНАКОМИТЬСЯ</button>
+                </div>
+                <div id="tab4" class="tab_content">
+                    <h2 class="title">Керамика</h2>
+                    <span class="subtitle">акции и спецпредложения</span>
+                    <button class="btn-details border-green">ОЗНАКОМИТЬСЯ</button>
+                </div>
+            </div>
+        </div>
+        <a href="#" data-scroll=".footer" class="scroll-down">scroll</a>
+    </div>
+    <section class="news">
+        <div class="container">
+            <h2 class="section-title">НОВИНКИ</h2>
+            <div class="slide-product">
+                <div>
+                    <div class="slide-card">
+                        <div class="slide-card-img">
+                            <img src="img/prod-slide-img.jpg" alt="">
+                            <div class="btn-buy">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span class="btn-buy-name">в корзину</span>
+                            </div>
+                        </div>
+                        <p class="slide-card-title">Винный кувшин</p>
+                        <div class="slide-card-info">
+                            <div class="info-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <div class="info-price">112 грн</div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="slide-card">
+                        <div class="slide-card-img">
+                            <img src="img/prod-slide-img.jpg" alt="">
+                            <div class="btn-buy">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span class="btn-buy-name">в корзину</span>
+                            </div>
+                        </div>
+                        <p class="slide-card-title">Винный кувшин</p>
+                        <div class="slide-card-info">
+                            <div class="info-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <div class="info-price">112 грн</div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="slide-card">
+                        <div class="slide-card-img">
+                            <img src="img/prod-slide-img.jpg" alt="">
+                            <div class="btn-buy">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span class="btn-buy-name">в корзину</span>
+                            </div>
+                        </div>
+                        <p class="slide-card-title">Винный кувшин</p>
+                        <div class="slide-card-info">
+                            <div class="info-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <div class="info-price">112 грн</div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="slide-card">
+                        <div class="slide-card-img">
+                            <img src="img/prod-slide-img.jpg" alt="">
+                            <div class="btn-buy">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span class="btn-buy-name">в корзину</span>
+                            </div>
+                        </div>
+                        <p class="slide-card-title">Винный кувшин</p>
+                        <div class="slide-card-info">
+                            <div class="info-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <div class="info-price">112 грн</div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="slide-card">
+                        <div class="slide-card-img">
+                            <img src="img/prod-slide-img.jpg" alt="">
+                            <div class="btn-buy">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span class="btn-buy-name">в корзину</span>
+                            </div>
+                        </div>
+                        <p class="slide-card-title">Винный кувшин</p>
+                        <div class="slide-card-info">
+                            <div class="info-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <div class="info-price">112 грн</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="about-us">
+        <div class="container">
+            <h2 class="section-title">о компании</h2>
+            <div class="content-about-us">
+                <img src="img/content-img.jpg" alt="" class="content-img">
+                <div class="content-description">
+                    <h5 class="content-title">Мы знаем толк в керамике</h5>
+                    <div class="content-info">
+                        <div class="info-text">
+                            Производство керамики – это процесс, известный с давних времен, который заключается в создании большого ряда продукции преимущественно из естественных глин, в частности, в сочетании с добавками минеральной и органической природы.
+                        </div>
+                        <div class="info-img">
+                            <img src="img/content-img-2.jpg" alt="">
+                            <div class="info-img-description">
+                                <span>Лучшее сырье<i class="far fa-circle"></i></span>
+                                <span>качество<i class="far fa-circle"></i></span>
+                                <span>ассортимент<i class="far fa-circle"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="present">
+        <div class="present-content">
+            <h5 class="present-title">Получите подарок</h5>
+            <p class="present-desriptions">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in </p>
+            <button class="btn-details border-white">ОЗНАКОМИТЬСЯ</button>
+        </div>
+    </section>
+    <section class="stock-product">
+        <div class="container">
+            <h2 class="section-title">Акции</h2>
+            <div class="slide-product">
+                <div>
+                    <div class="slide-card">
+                        <div class="slide-card-img">
+                            <img src="img/prod-slide-img.jpg" alt="">
+                            <div class="btn-buy">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span class="btn-buy-name">в корзину</span>
+                            </div>
+                        </div>
+                        <p class="slide-card-title">Винный кувшин</p>
+                        <div class="slide-card-info">
+                            <div class="info-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <div class="info-price">112 грн</div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="slide-card">
+                        <div class="slide-card-img">
+                            <img src="img/prod-slide-img.jpg" alt="">
+                            <div class="btn-buy">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span class="btn-buy-name">в корзину</span>
+                            </div>
+                        </div>
+                        <p class="slide-card-title">Винный кувшин</p>
+                        <div class="slide-card-info">
+                            <div class="info-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <div class="info-price">112 грн</div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="slide-card">
+                        <div class="slide-card-img">
+                            <img src="img/prod-slide-img.jpg" alt="">
+                            <div class="btn-buy">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span class="btn-buy-name">в корзину</span>
+                            </div>
+                        </div>
+                        <p class="slide-card-title">Винный кувшин</p>
+                        <div class="slide-card-info">
+                            <div class="info-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <div class="info-price">112 грн</div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="slide-card">
+                        <div class="slide-card-img">
+                            <img src="img/prod-slide-img.jpg" alt="">
+                            <div class="btn-buy">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span class="btn-buy-name">в корзину</span>
+                            </div>
+                        </div>
+                        <p class="slide-card-title">Винный кувшин</p>
+                        <div class="slide-card-info">
+                            <div class="info-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <div class="info-price">112 грн</div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="slide-card">
+                        <div class="slide-card-img">
+                            <img src="img/prod-slide-img.jpg" alt="">
+                            <div class="btn-buy">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span class="btn-buy-name">в корзину</span>
+                            </div>
+                        </div>
+                        <p class="slide-card-title">Винный кувшин</p>
+                        <div class="slide-card-info">
+                            <div class="info-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <div class="info-price">112 грн</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <ul class="footer-nav">
+                <li class="footer-nav-items"><a data-scroll=".wrapper" href="#">Главная</a></li>
+                <li class="footer-nav-items"><a data-scroll=".news" href="#">Каталог</a></li>
+                <li class="footer-nav-items"><a data-scroll=".about-us" href="#">О нас</a></li>
+                <li class="footer-nav-items"><a data-scroll=".wrapper" href="#">Контакты</a></li>
+            </ul>
+            <ul class="footer-content">
+                <li class="footer-content-item contacts">
+                    <h6 class="title">Подпишитесь на нас</h6>
+                    <ul class="social">
+                        <li class="social-item"><a class="social-link" href="#"><i class="fab fa-facebook-f"></i></a></li>
+                        <li class="social-item"><a class="social-link" href="#"><i class="fab fa-youtube"></i></a></li>
+                        <li class="social-item"><a class="social-link" href="#"><i class="fab fa-vk"></i></a></li>
+                    </ul>
+                </li>
+                <li class="footer-content-item">
+                    <a href="#">
+                        <img src="img/footer-logo.jpg" alt="" class="footer-img">
+                    </a>                    
+                </li>
+                <li class="footer-content-item">
+                    <h6 class="title">Подпишитесь на нашу рассылку</h6>
+                    <div class="group">      
+                        <input type="email" name="email" id="email" required>
+                        <span class="bar"></span>
+                        <label>Ваш Email</label>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </footer>
+    <div class="languages">
+        <span class="language active">Ru</span>
+        <span class="language">Ua</span>
+        <span class="language">En</span>
+    </div>
+    <script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous">
+    </script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

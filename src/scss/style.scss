@@ -1,0 +1,955 @@
+@font-face {
+    font-family: 'Century_Gothic', sans-serif;
+    src: url('../fonts/subset-CenturyGothic.woff2') format('woff2'),
+        url('../fonts/subset-CenturyGothic.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Century_Gothic_bold', sans-serif;
+    src: url('../fonts/CenturyGothic-Bold.woff2') format('woff2'),
+        url('../fonts/CenturyGothic-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Baufra Regular', sans-serif;
+    src: url('../fonts/Baufra-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Baufra Medium', sans-serif;
+    src: url('../fonts/Baufra-Medium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Baufra DemiBold', sans-serif;
+    src: url('../fonts/Baufra-DemiBold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Baufra Bold', sans-serif;
+    src: url('../fonts/Baufra-Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+*,
+*:after,
+*:before {
+	box-sizing: border-box;
+}
+
+*,
+*:hover,
+*:active{
+	outline: none;
+}
+
+button,
+button:active {
+    border-style: none;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+img {
+	border: 0;
+}
+
+form,
+fieldset {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+a {
+    text-decoration: none;
+    &:hover {
+        text-decoration: none;
+        cursor: pointer;
+    }
+}
+
+.container {
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.btn {
+    padding: 17px 45px 18px;
+    display: inline-block;
+    font-family: 'Baufra Regular', sans-serif;
+    font-size: 14px;
+    color: #fff;
+    background-color: #628721;
+    border-radius: 20px;
+} 
+
+.btn-details {
+    padding: 15px 25px;
+    display: inline-block;
+    font-family: 'Baufra Regular', sans-serif;
+    font-size: 14px;
+    color: #fff;
+    background-color: transparent; 
+    border-radius: 10px;       
+    &.border-green {
+        border: 1px solid #628721;
+        transition: all 0.3s ease-in;
+        &:hover {
+            color: #ffd800;
+            border-color: #fff;
+        }
+    }
+    &.border-white {
+        border: 1px solid #fff;
+        transition: all 0.3s ease-in;
+        &:hover {
+            color: #ffd800;
+            border-color: #ffd800;
+        }
+    }
+}
+
+.btn-new-order {
+    text-transform: uppercase;
+    padding: 18px 15px 15px;
+    display: inline-block;
+    font-family: 'Baufra Regular', sans-serif;
+    font-size: 14px;
+    color: #312318;
+    background-color: transparent;
+    border: 1px solid #628721; 
+    border-radius: 10px; 
+    transition: all 0.2s ease-in;
+    &:hover {
+        color: #628721;
+        border-color: #ffd800;
+    }
+}
+
+.news,
+.about-us,
+.stock-product {
+    padding: 55px 0 15px;
+} 
+
+.section-title {
+    margin: 0 0 40px;
+    text-align: center;
+    font-family: 'Baufra Bold', sans-serif;
+    font-size: 36px;
+    text-transform: uppercase;
+    color: #605147;
+}
+
+// wrapper start
+.wrapper {
+    position: relative;
+}
+.header {
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.13);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    .menu {
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .menu__navigation {
+            position: relative;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            .icon_menu {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                width: 40px;
+                height: 30px;
+                position: relative;
+                cursor: pointer;
+                &:hover span {
+                    background: #ffd800;
+                }
+                span {
+                    width: 100%;
+                    height: 3px;
+                    border-radius: 2px;
+                    background: #605147;
+                    transition: background 0.3s ease-in;
+                }
+            }
+            .menu__navigation_card,
+            .menu_search_card {
+                display: none;
+                min-width: 320px;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                padding: 15px 30px 15px;
+                background-color: #fff;
+                opacity: 0;
+                transition: opacity 0.25s ease-in;
+                &.active {
+                    opacity: 1;
+                    display: flex;
+                }
+            }
+            .menu__navigation_card{
+                flex-direction: column;
+                align-items: flex-start;
+                .navigation_card_item {
+                    font-family: 'Baufra Bold', sans-serif;
+                    font-size: 24px;
+                    color: #605147;
+                    transition: color 0.25s ease-in;
+                    &:hover {
+                        color: #ffd800;
+                    }
+                    & + .navigation_card_item {
+                        margin-top: 25px;
+                    }
+                }
+            }
+            .menu_search_card {
+                input {
+                    width: 100%;
+                    font-family: Baufra Regular,sans-serif;
+                    font-size: 14px;
+                    padding: 15px 20px;
+                    background-color: #fff;
+                    border: 1px solid #605147;
+                    border-radius: 4px;
+                    color: #1f1e1c;
+                }
+            }
+        } 
+
+        .menu__icons {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
+        .menu_search,
+        .icon_phone,
+        .icon_user,
+        .icon_shop {
+            display: flex;
+            width: 45px;
+            height: 45px;
+            border: 1px solid #605147;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all 0.3s ease-in;
+            &:hover {
+                background-color: #ffd800;
+                border: 1px solid #ffd800;
+            }
+            &:hover .fas {
+                color: #fff;
+            }
+
+            .fas {
+                margin: auto;
+                font-size: 20px;
+                color: #605147;
+                transition: color 0.3s ease-in;
+                &.fa-search,
+                &.fa-phone {
+                    transform: rotate(90deg);
+                }
+            }         
+        } 
+        
+        .menu_search {
+            margin-left: 45px;
+        }
+
+        .icon_phone,
+        .icon_user,
+        .icon_shop {
+            margin-left: 28px;
+        }
+
+        .icon_user {
+            .login_card,
+            .registration_card {
+                display: none;
+                position: absolute;
+                top: 100%;
+                right: 0;
+                text-align: center;
+                font-family: 'Baufra Regular', sans-serif;
+                font-size: 14px;
+                padding: 30px 15px;
+                background-color: #fff;
+                &.active {
+                    display: block;
+                }
+                input {
+                    width: 290px;
+                    font-family: 'Baufra Regular', sans-serif;
+                    font-size: 14px;
+                    padding: 15px 20px;
+                    background-color: #fff;
+                    border: 1px solid #605147;
+                    border-radius: 4px;
+                    color: #1f1e1c;
+                    & + input {
+                        margin: 20px 0;
+                    }
+                } 
+
+                .log_in,
+                .reg {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    a {
+                        color: #565e7b;
+                        text-decoration: underline;
+                    }
+                } 
+                
+                .log_in {
+                    padding-bottom: 20px;
+                    border-bottom: 1px solid #605147;
+                    a {
+                        margin-left: 30px;
+                    }
+                }
+
+                .reg {
+                    padding: 20px 0 15px 0;
+                    a {
+                        margin-left: 5px;
+                    }
+                }
+            }
+
+            .registration_card {
+                .registration_block {
+                    display: flex;
+                    align-items: center;
+                    height: 51px;
+                    &:nth-child(3) {
+                        margin-bottom: 20px;
+                    }
+                    & + .registration_block {
+                        margin-top: 20px;
+                    }
+                    input {
+                        width: 260px;
+                        &:first-child {
+                            margin-right: 30px;
+                        }
+                    }
+                }
+                .registration_login {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 15px 0 5px;
+                    border-top: 1px solid #605147;
+                    a {
+                        margin-left: 5px;
+                        color: #565e7b;
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+
+        .icon_shop {
+            position: relative;
+            .count_product {
+                display: flex;
+                position: absolute;
+                top: 50%;
+                left: -55%;
+                transform: translate(50%, -50%);
+                height: 25px;
+                width: 25px;
+                border-radius: 50%;
+                background-color: #ffd800;
+                border: 1px solid #fff;
+                span {
+                    font-family: 'Century_Gothic_bold', sans-serif;
+                    margin: auto;
+                    font-size: 14px;
+                    color: #fff;
+                }
+            }
+        }
+
+        .shopping-card {
+            width: 520px;
+            display: none;
+            position: absolute;
+            top: 100%;
+            right: 0;
+            text-align: center;
+            font-family: 'Baufra Regular', sans-serif;
+            font-size: 14px;
+            padding: 30px 15px;
+            background-color: #fff;
+            &.active {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .shopping-block {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                .shopping-name-group {
+                    line-height: 20px;
+                    margin-left: 55px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    color: #605147;
+                }
+                .shopping-price {
+                    margin-left: 95px;
+                    font-size: 18px;
+                    color: #565e7b;
+                }
+                .fa-times {
+                    margin-left: 65px;
+                    font-size: 18px;
+                    color: #3a3232;
+                }
+            }
+            .shopping-total-price {
+                margin-top: 20px;
+                width: 100%;
+                font-family: 'Baufra Regular', sans-serif;
+                color: #605147;
+                padding: 15px 0;
+                border-top: 1px solid #605147;
+                .price-name {
+                    font-size: 20px;
+                }
+                .price-count,
+                .price-currency {
+                    font-size: 18px;
+                }
+                .price-count {
+                    margin-left: 40px;
+                }
+                .price-currency {
+                    margin-left: 10px;
+                }
+            }
+        }
+
+        .phone_contact_card {
+            width: 320px;
+            display: none;
+            position: absolute;
+            top: 100%;
+            right: 0;
+            padding: 30px 15px;
+            background-color: #fff;
+            &.active {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .phone_contact_link {
+                font-family: 'Baufra Regular', sans-serif;
+                font-size: 24px;
+                color: #605147;
+                transition: color 0.25s ease-in;
+                &:hover {
+                    color: #ffd800;
+                }
+                & .fa-phone {
+                    margin-right: 10px;
+                    transform: rotate(90deg);
+                }
+                & + .phone_contact_link {
+                    margin-top: 25px;
+                }
+            }
+        }
+
+        .menu__logo {
+            & > a {
+                float: left;
+                width: 176px;
+                height: 72px;
+                text-indent:-1000em;
+                background-image: url(../img/logo.png);
+            }
+        }
+    }
+}
+
+.visual {
+    height: 100vh;
+    padding-top: 100px;
+    background-image: url(../img/bg-slider-1.jpg);
+    background-size: cover;
+}
+
+.tabs {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .tabs_item {
+        min-height: 110px;
+        background-color: #fff;
+        width: 25%;
+        text-align: center;
+        padding: 15px 10px 7px;
+        cursor: pointer;
+        transition: box-shadow 0.3s ease-in;
+        & + .tabs_item {
+            border-left: 1px solid #e1e1e1;
+        }
+        &.active {
+            box-shadow: inset 0 0 0 5px #ffd800;
+        }
+        &:hover .tabs_item_name {
+            color: #ffd800;
+        }
+        .tabs_item_name {
+            display: block;
+            margin-top: 10px;
+            font-family: 'Baufra Medium', sans-serif;
+            font-size: 16px;
+            color: #2c1e13;
+            line-height: 18px;
+            transition: color 0.3s ease-in;
+        }
+    }
+}
+
+.tab_content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    .title,
+    .subtitle {
+        font-family: 'Baufra DemiBold', sans-serif;
+        font-size: 30px;
+        color: #fff;
+        letter-spacing: 0.1em;
+    }
+    .title {
+        margin-bottom: 10px;
+        text-transform: uppercase;
+    }
+    .subtitle {
+        margin-bottom: 20px;
+    }
+}
+// wrapper end
+// section news start
+.slide-card {
+    max-width: 440px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 25px 40px 10px;
+    border: 1px solid #ebebeb;
+    cursor: pointer;
+    transition: all 0.25s ease-in;
+    &:hover {
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+    }
+    .slide-card-img {
+        position: relative;
+        img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+        }
+        .btn-buy {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            background-color: #ffd800;
+            border-radius: 30px 0 0 30px;
+            transition: all 0.25s ease-in;
+            .fa-shopping-cart {
+                font-size: 24px;
+                color: #fff;
+                margin-bottom: 70px;
+            }
+            .btn-buy-name {
+                font-family: 'Baufra Bold', sans-serif;
+                font-size: 24px;
+                color: #fff;
+                transform: rotate(270deg);
+            }
+        }
+    }
+    .slide-card-title {
+        font-family: 'Baufra Bold', sans-serif;
+        font-size: 20px;
+        color: #605147;
+        margin: 10px 0 25px;
+    }
+    .slide-card-info {
+        display: flex;
+        align-items: center;
+        .info-rating {
+            .fa-star {
+                color: #ffd800;
+                font-size: 20px;
+            }
+        }
+        .info-price {
+            margin-left: 40px;
+            font-size: 24px;
+        }
+    }
+    &:hover .btn-buy {
+        opacity: 1;
+    }
+}
+
+.slick-slide {
+    & + .slick-slide {
+        margin-left: 30px;
+    }
+}
+
+// section news end
+
+// section about-us start
+.content-about-us {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    .content-description {
+        margin-left: 40px;
+        display: flex;
+        flex-direction: column;
+        .content-title {
+            max-width: 370px;
+            margin: 0 auto 55px;
+            font-family: 'Baufra Medium', sans-serif;
+            font-size: 48px;
+            color: #605147;
+        }
+        .content-info {
+            display: flex;
+            align-items: flex-start;
+            .info-text {
+                max-width: 300px;
+                font-family: 'Baufra DemiBold', sans-serif;
+                font-size: 18px;
+                color: #605147;
+            }
+            .info-img {
+                margin-left: 50px;
+                display: flex;
+                .info-img-description {
+                    margin-left: 20px;
+                    height: 400px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    justify-content: space-around;
+                    span {
+                        position: relative;
+                        text-align: right;
+                        font-family: 'Baufra DemiBold', sans-serif;
+                        text-transform: uppercase;
+                        font-size: 18px;
+                        color: #605147;
+                        .fa-circle {
+                            position: absolute;
+                            top: 100%;
+                            left: 0;
+                            transform: translate(-100%,-50%);
+                        }
+                        &::after {
+                            content: "";
+                            display: block;
+                            height: 1px;
+                            width: 150px;
+                            background-color: #605147;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// section about-us end
+
+// section present start
+.present {
+    position: relative;
+    height: 420px;
+    background-image: url(../img/bg-present.jpg);
+    background-size: cover;
+    .present-content {
+        position: absolute;
+        top: 50%;
+        left: 30%;
+        transform: translate(-30%,-50%);
+        max-width: 550px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .present-title {
+            font-family: 'Baufra Medium', sans-serif;
+            font-size: 54px;
+            color: #fefefe;
+            margin: 0 0 30px;
+        }
+        .present-desriptions {
+            font-family: 'Baufra Regular', sans-serif;
+            font-size: 14px;
+            line-height: 27px;
+            text-align: center;
+            color: #fff;
+            margin-bottom: 55px;
+        }
+    }
+}
+// section present end
+// footer start
+.footer {
+    padding: 30px 0 25px;
+    background-color: #f7f7f7;
+    .footer-nav {
+        text-align: center;
+        margin-bottom: 30px;
+        .footer-nav-items {
+            display: inline-block;
+            & + .footer-nav-items {
+                margin-left: 80px;
+            }
+        }
+        .footer-nav-items a {
+            font-family: 'Baufra Medium', sans-serif;
+            font-size: 24px;
+            color: #605147;
+            transition: color 0.25s ease-in;
+            &:hover {
+                color: #ffd800;
+            } 
+        }
+    }
+    .footer-content {
+        max-width: 1370px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        .footer-content-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        // input start
+        .group {
+            position: relative;
+        }  
+        input {
+            font-family: 'Baufra Regular', sans-serif;
+            color: #ffd800;
+            font-size: 20px;
+            padding: 10px;
+            display: block;
+            width: 300px;
+            border: none;
+            border-bottom: 1px solid #000;
+            background-color: #f7f7f7;
+            &:focus {
+            outline: none;
+            }
+        }
+        /* LABEL ======================================= */
+        label {
+            color: #605147;
+            font-family: 'Baufra Regular', sans-serif;
+            font-size: 24px;
+            position: absolute;
+            pointer-events: none;
+            left: 10px;
+            top: 15px;
+            transition: 0.2s ease all;
+            -moz-transition: 0.2s ease all;
+            -webkit-transition: 0.2s ease all;
+        }
+        /* active state */
+        input {
+            &:focus ~ label,
+            &:valid ~ label {
+            top: -15px;
+            font-size: 14px;
+            color: #ffd800;
+            }
+        }
+        /* BOTTOM BARS ================================= */
+        .bar {
+            position: relative;
+            display: block;
+            width: 320px;
+            &:before, 
+            &:after {
+            content: '';
+            height: 2px;
+            width: 0;
+            bottom: 0;
+            position: absolute;
+            background: #ffd800; 
+            transition: 0.2s ease all;
+            -moz-transition: 0.2s ease all;
+            -webkit-transition: 0.2s ease all;
+            }
+            &:before {
+            left: 50%;
+            }
+            &:after {
+            right: 50%;
+            }
+        }
+        /* active state */
+        input:focus {
+            ~ .bar:before,
+            ~ .bar:after{
+            width: 50%;
+            }
+        }
+        // input end
+            .title {
+                width: 260px;
+                font-family: 'Baufra DemiBold', sans-serif;
+                font-size: 24px;
+                color: #605147;
+                margin: 0 0 20px;
+            }
+            .social {
+                display: flex;
+                .social-item {
+                    height: 40px;
+                    width: 40px;
+                    border-radius: 50%;
+                    border: 1px solid #605147;
+                    display: flex;
+                    & + .social-item {
+                        margin-left: 15px;
+                    }
+                    .social-link {
+                        margin: auto;
+                        .fab {
+                            font-size: 20px;
+                            color: #605147;
+                            transition: color 0.25s ease-in;
+                        }
+                    }
+                    &:hover .fa-facebook-f {
+                    color: #3b5998;
+                    }
+                    &:hover .fa-youtube {
+                        color: #ff0000;
+                    }
+                    &:hover .fa-vk {
+                        color: #597da3;
+                    }
+                }
+            }
+        }
+    }
+}
+// footer end
+
+// language
+.languages {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px 10px;
+    background-color: #fff;
+    .language {
+        font-family: 'Century_Gothic', sans-serif;
+        font-size: 18px;
+        color: #605147;
+        transition: color 0.25s ease-in;
+        &:hover {
+            color: #ffd800;
+        }
+        &.active {
+            font-family: 'Century_Gothic_bold', sans-serif;
+        }
+        & + .language {
+            margin-top: 25px;
+        }
+    }
+}
+
+.scroll-down {
+    display: block;
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Baufra DemiBold', sans-serif;
+    font-size: 16px;
+    color: #fff;
+    transition: color 0.25s ease-in;
+    &:hover {
+        color: #ffd800;
+    }
+    &::before {
+        content: "";
+        margin: 0 auto 8px;
+        display: block;
+        height: 30px;
+        width: 1px;
+        background-color: #fff;
+    }
+}
