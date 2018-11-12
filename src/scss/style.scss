@@ -184,6 +184,11 @@ a {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        @media screen and (max-width: 576px) {
+            flex-wrap: wrap;
+            height: auto;
+            padding: 10px 0;
+        }
         .menu__navigation {
             position: relative;
             height: 100%;
@@ -219,6 +224,10 @@ a {
                 background-color: #fff;
                 opacity: 0;
                 transition: opacity 0.25s ease-in;
+                @media screen and (max-width: 576px) {
+                    padding: 10px 15px;
+                    min-width: 280px;
+                }
                 &.active {
                     opacity: 1;
                     display: flex;
@@ -294,17 +303,22 @@ a {
         
         .menu_search {
             margin-left: 45px;
+            @media screen and (max-width: 768px) {
+                margin-left: 10px;
+            }
         }
 
         .icon_phone,
         .icon_user,
         .icon_shop {
             margin-left: 28px;
+            @media screen and (max-width: 768px) {
+                margin-left: 10px;
+            }
         }
 
         .icon_user {
-            .login_card,
-            .registration_card {
+            .login_card {
                 display: none;
                 position: absolute;
                 top: 100%;
@@ -318,7 +332,7 @@ a {
                     display: block;
                 }
                 input {
-                    width: 290px;
+                    width: 270px;
                     font-family: 'Baufra Regular', sans-serif;
                     font-size: 14px;
                     padding: 15px 20px;
@@ -357,38 +371,6 @@ a {
                     }
                 }
             }
-
-            .registration_card {
-                .registration_block {
-                    display: flex;
-                    align-items: center;
-                    height: 51px;
-                    &:nth-child(3) {
-                        margin-bottom: 20px;
-                    }
-                    & + .registration_block {
-                        margin-top: 20px;
-                    }
-                    input {
-                        width: 260px;
-                        &:first-child {
-                            margin-right: 30px;
-                        }
-                    }
-                }
-                .registration_login {
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    padding: 15px 0 5px;
-                    border-top: 1px solid #605147;
-                    a {
-                        margin-left: 5px;
-                        color: #565e7b;
-                        text-decoration: underline;
-                    }
-                }
-            }
         }
 
         .icon_shop {
@@ -424,6 +406,9 @@ a {
             font-size: 14px;
             padding: 30px 15px;
             background-color: #fff;
+            @media screen and (max-width: 576px) {
+                width: 280px;
+            }
             &.active {
                 display: flex;
                 flex-direction: column;
@@ -441,11 +426,17 @@ a {
                     flex-direction: column;
                     align-items: flex-start;
                     color: #605147;
+                    @media screen and (max-width: 576px) {
+                        margin-left: 10px;
+                    }
                 }
                 .shopping-price {
                     margin-left: 95px;
                     font-size: 18px;
                     color: #565e7b;
+                    @media screen and (max-width: 576px) {
+                        margin-left: 10px;
+                    }
                 }
                 .fa-times {
                     margin-left: 65px;
@@ -508,6 +499,11 @@ a {
         }
 
         .menu__logo {
+            @media screen and (max-width: 576px) {
+                order: -1;
+                width: 100%;
+                margin: 0 0 10px;
+            }
             & > a {
                 float: left;
                 width: 176px;
@@ -524,12 +520,17 @@ a {
     padding-top: 100px;
     background-image: url(../img/bg-slider-1.jpg);
     background-size: cover;
+    @media screen and (max-width: 576px) {
+        padding-top: 147px;
+        height: 100%;
+    }
 }
 
 .tabs {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
     .tabs_item {
         min-height: 110px;
         background-color: #fff;
@@ -538,6 +539,12 @@ a {
         padding: 15px 10px 7px;
         cursor: pointer;
         transition: box-shadow 0.3s ease-in;
+        @media screen and (max-width: 992px) {
+            width: 50%;
+        }
+        @media screen and (max-width: 576px) {
+            width: 100%;
+        }
         & + .tabs_item {
             border-left: 1px solid #e1e1e1;
         }
@@ -567,10 +574,19 @@ a {
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
+    @media screen and (max-width: 1024px) {
+        top: 70%;
+    }
+    @media screen and (max-width: 576px) {
+        position: static;
+        transform: none;
+        margin-bottom: 15px;
+    }
     .title,
     .subtitle {
         font-family: 'Baufra DemiBold', sans-serif;
         font-size: 30px;
+        text-align: center;
         color: #fff;
         letter-spacing: 0.1em;
     }
@@ -593,6 +609,9 @@ a {
     border: 1px solid #ebebeb;
     cursor: pointer;
     transition: all 0.25s ease-in;
+    @media screen and (max-width: 768px) {
+        margin: 0 auto;
+    }
     &:hover {
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
     }
@@ -616,16 +635,25 @@ a {
             background-color: #ffd800;
             border-radius: 30px 0 0 30px;
             transition: all 0.25s ease-in;
+            @media screen and (max-width: 576px) {
+                padding: 20px 10px;
+            }
             .fa-shopping-cart {
                 font-size: 24px;
                 color: #fff;
                 margin-bottom: 70px;
+                @media screen and (max-width: 576px) {
+                    margin: auto 0;
+                }
             }
             .btn-buy-name {
                 font-family: 'Baufra Bold', sans-serif;
                 font-size: 24px;
                 color: #fff;
                 transform: rotate(270deg);
+                @media screen and (max-width: 576px) {
+                    display: none;
+                }
             }
         }
     }
@@ -634,11 +662,20 @@ a {
         font-size: 20px;
         color: #605147;
         margin: 10px 0 25px;
+        @media screen and (max-width: 576px) {
+            margin: 10px 0 10px;
+        }
     }
     .slide-card-info {
         display: flex;
         align-items: center;
+        @media screen and (max-width: 576px) {
+            flex-direction: column;
+        }
         .info-rating {
+            @media screen and (max-width: 576px) {
+                margin-bottom: 10px;
+            }
             .fa-star {
                 color: #ffd800;
                 font-size: 20px;
@@ -647,6 +684,9 @@ a {
         .info-price {
             margin-left: 40px;
             font-size: 24px;
+            @media screen and (max-width: 576px) {
+                margin-left: 0;
+            }
         }
     }
     &:hover .btn-buy {
@@ -667,6 +707,10 @@ a {
     display: flex;
     justify-content: center;
     align-items: flex-start;
+    @media screen and (max-width: 1200px) {
+        flex-direction: column;
+        align-items: center;
+    }
     .content-description {
         margin-left: 40px;
         display: flex;
@@ -677,19 +721,37 @@ a {
             font-family: 'Baufra Medium', sans-serif;
             font-size: 48px;
             color: #605147;
+            @media screen and (max-width: 1200px) {
+                margin-top: 15px;
+                text-align: center;
+            }
+            @media screen and (max-width: 576px) {
+                margin-bottom: 25px;
+            }
         }
         .content-info {
             display: flex;
             align-items: flex-start;
+            @media screen and (max-width: 576px) {
+                flex-direction: column;
+                align-items: center;
+            }
             .info-text {
                 max-width: 300px;
                 font-family: 'Baufra DemiBold', sans-serif;
                 font-size: 18px;
                 color: #605147;
+                @media screen and (max-width: 576px) {
+                    text-align: center;
+                    margin-bottom: 10px;
+                }
             }
             .info-img {
                 margin-left: 50px;
                 display: flex;
+                @media screen and (max-width: 576px) {
+                    display: none;
+                }
                 .info-img-description {
                     margin-left: 20px;
                     height: 400px;
@@ -731,6 +793,10 @@ a {
     height: 420px;
     background-image: url(../img/bg-present.jpg);
     background-size: cover;
+    @media screen and (max-width: 768px) {
+        padding: 25px 0 15px;
+
+    }
     .present-content {
         position: absolute;
         top: 50%;
@@ -740,11 +806,20 @@ a {
         display: flex;
         flex-direction: column;
         align-items: center;
+        @media screen and (max-width: 768px) {
+            position: static;
+            transform: none;
+        }
         .present-title {
             font-family: 'Baufra Medium', sans-serif;
             font-size: 54px;
             color: #fefefe;
             margin: 0 0 30px;
+            @media screen and (max-width: 576px) {
+                font-size: 42px;
+                margin: 0 0 15px;
+                text-align: center;
+            }
         }
         .present-desriptions {
             font-family: 'Baufra Regular', sans-serif;
@@ -753,6 +828,9 @@ a {
             text-align: center;
             color: #fff;
             margin-bottom: 55px;
+            @media screen and (max-width: 576px) {
+                margin-bottom: 25px; 
+            }
         }
     }
 }
@@ -764,10 +842,22 @@ a {
     .footer-nav {
         text-align: center;
         margin-bottom: 30px;
+        @media screen and (max-width: 576px) {
+            margin-bottom: 40px;
+        }
         .footer-nav-items {
             display: inline-block;
+            @media screen and (max-width: 576px) {
+                display: block;
+            }
             & + .footer-nav-items {
                 margin-left: 80px;
+                @media screen and (max-width: 768px) {
+                    margin-left: 25px; 
+                }
+                @media screen and (max-width: 576px) {
+                    margin-left: 0;
+                }
             }
         }
         .footer-nav-items a {
@@ -781,14 +871,33 @@ a {
         }
     }
     .footer-content {
+        margin: 0 auto;
         max-width: 1370px;
         display: flex;
         align-items: flex-start;
         justify-content: space-between;
+        @media screen and (max-width: 576px) {
+            flex-direction: column;
+            align-items: center;
+        }
         .footer-content-item {
             display: flex;
             flex-direction: column;
             align-items: center;
+            &.footer-logo {
+                @media screen and (max-width: 576px) {
+                    order: -1;
+                }
+            }
+            & .title {
+                text-align: center;
+                @media screen and (max-width: 576px) {
+                    margin-bottom: 5px;
+                }
+            }
+            &.contacts {
+                margin: 40px 0;
+            }
         // input start
         .group {
             position: relative;
@@ -914,6 +1023,9 @@ a {
     flex-direction: column;
     padding: 20px 10px;
     background-color: #fff;
+    @media screen and (max-width: 768px) {
+        top: 35%;
+    }
     .language {
         font-family: 'Century_Gothic', sans-serif;
         font-size: 18px;
@@ -941,6 +1053,9 @@ a {
     font-size: 16px;
     color: #fff;
     transition: color 0.25s ease-in;
+    @media screen and (max-width: 576px) {
+        display: none;
+    }
     &:hover {
         color: #ffd800;
     }
